@@ -14,7 +14,7 @@ function preload(){
   rubyImg = loadImage("ruby.png");
   swordImg = loadImage("sword.png");
   obstacleImg = loadImage("obstacle2.png");
- endImg =loadImage("gameOver.png");
+  endImg =loadImage("gameOver.png");
   
 }
 
@@ -184,7 +184,7 @@ function createObstacle() {
   if (World.frameCount % 80 == 0) {
   var obstacle = createSprite(Math.round(random(50, 350)));
   obstacle.addImage(obstacleImg);
-  obstacle.scale=0.13;
+  obstacle.scale=0.1;
   obstacle.velocityY = 8;
   obstacle.lifetime = 150;
   obstacleG.add(obstacle);
