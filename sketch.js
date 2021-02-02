@@ -106,6 +106,7 @@ function draw() {
     jwelleryG.destroyEach();
     rubyG.destroyEach();
     swordGroup.destroyEach();
+    obstacleG.destroyEach();
 
     
     cashG.setVelocityYEach(0);
@@ -161,7 +162,7 @@ function createRuby() {
   if (World.frameCount % 80 == 0) {
   var ruby = createSprite(Math.round(random(50, 350)));
   ruby.addImage(rubyImg);
-  ruby.scale=0.13;
+  ruby.scale=0.1;
   ruby.velocityY = 8;
   ruby.lifetime = 150;
   rubyG.add(ruby);
