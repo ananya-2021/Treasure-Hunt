@@ -62,12 +62,24 @@ function draw() {
     
     end.visible = false;
     
-    createCash();
-    createDiamonds();
-    createJwellery();
-    createRuby();
-    createSword();
-    createObstacle();
+    if(World.frameCount % 80 === 0){
+      var r = Math.round(random(1,6))
+      switch(r){
+        case 1 : createCash();
+                 break;
+        case 2 : createJwellery();
+                 break;
+        case 3 : createDiamonds();
+                 break;
+        case 4 :  createRuby();
+                 break;
+        case 5 : createSword();
+                 break;
+        case 6 : createObstacle();
+                 break;
+        default : break;
+      }  
+    }
 
     if (cashG.isTouching(boy)) {
       cashG.destroyEach();
@@ -162,7 +174,7 @@ function createRuby() {
   if (World.frameCount % 80 == 0) {
   var ruby = createSprite(Math.round(random(50, 350)));
   ruby.addImage(rubyImg);
-  ruby.scale=0.1;
+  ruby.scale=0.05;
   ruby.velocityY = 8;
   ruby.lifetime = 150;
   rubyG.add(ruby);
